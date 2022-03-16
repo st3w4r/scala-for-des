@@ -34,3 +34,6 @@ In this course we need to cover
     - Selective? Maybe worth mentioning but not using
 - AST
     - building programs
+
+testing
+law checking
