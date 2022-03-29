@@ -1,0 +1,14 @@
+FROM openjdk:11
+
+WORKDIR /workspace
+
+RUN apt-get update -y && apt-get upgrade -y
+
+# Install dependencies
+RUN apt install zip curl -y
+RUN curl -s "https://get.sdkman.io" | bash
+
+# Init SDK man, Install Scala 3 and sbt
+RUN bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && sdk version && sdk install scala 3.1.1 && sdk install sbt"
+
+CMD /bin/bash
